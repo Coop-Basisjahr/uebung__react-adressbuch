@@ -7,7 +7,9 @@ type EmployeeCardProps = {
 export default function EmployeeCard({ employee }: EmployeeCardProps) {
     // TODO: Employee verlinken
     return <div className="employee-card">
-        <h3>{employee.name}</h3>
-        <p>{employee.department}</p>
+        <p>
+            <span className="text-bold">{employee.name}</span><br />
+            {employee.department}
+        </p>
     </div>
 }

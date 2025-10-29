@@ -1,4 +1,5 @@
 import EmployeeCard from "../components/EmployeeCard";
+import EmployeeGrid from "../components/EmployeeGrid";
 import employeeRepo from "../data/EmployeeRepository"
 
 export default function EmployeePage() {
@@ -8,17 +9,16 @@ export default function EmployeePage() {
 
     return <>
         <h1>{employee.name}</h1>
-        <p>{employee.department}</p>
-        {employee.superior &&
-            // TODO: Vorgesetzten verlinken
-            <p>Vorgesetzter: {employee.superior.name}</p>
-        }
+        <p>Abteilung: {employee.department}
+            {employee.superior && <>
+                <br />
+                {/* TODO: Vorgesetzten verlinken */}
+                <span>Vorgesetzte(r): {employee.superior.name}</span>
+            </>}
+        </p>
         {employee.subordinates.length > 0 && <>
             <h2>Direkt untergestellte</h2>
-            {employee.subordinates.map(sub => <EmployeeCard
-                key={sub.id}
-                employee={sub}
-            />)}
+            <EmployeeGrid employees={employee.subordinates} />
         </>}
     </>
 }

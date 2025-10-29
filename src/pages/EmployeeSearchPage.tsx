@@ -1,4 +1,4 @@
-import EmployeeCard from "../components/EmployeeCard";
+import EmployeeGrid from "../components/EmployeeGrid";
 import employeeRepo from "../data/EmployeeRepository"
 
 
@@ -9,6 +9,7 @@ export default function EmployeeSearchPage() {
     const employees = employeeRepo.findWhere(name, department);
 
     return <>
-        {employees.map(e => <EmployeeCard key={e.id} employee={e} />)}
+        <h1 className="text-center">Suchergebnisse</h1>
+        <EmployeeGrid employees={employees} />
     </>
 }

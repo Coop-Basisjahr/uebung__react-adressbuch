@@ -41,14 +41,14 @@ const marketingManager: Employee = {
 
 const hr: Employee[] = [
     {
-        id: "h1",
+        id: "h2",
         name: "Devin Monroe",
         department: "HR",
         superior: hrManager,
         subordinates: []
     },
     {
-        id: "h2",
+        id: "h3",
         name: "Zariah Moss",
         department: "HR",
         superior: hrManager,
@@ -58,50 +58,48 @@ const hr: Employee[] = [
 
 const devs: Employee[] = [
     {
-        id: "d1",
-        name: "Victor Gray",
-        department: "IT",
-        superior: itManager,
-        subordinates: [],
-    },
-    {
-        id: "d2",
+        id: "it2",
         name: "David Kim",
         department: "IT",
         superior: itManager,
         subordinates: [],
     },
     {
-        id: "d3",
+        id: "it3",
         name: "Ella Brown",
         department: "IT",
         superior: itManager,
         subordinates: [],
     },
     {
-        id: "d4",
+        id: "it4",
         name: "Robin Baldwin",
         department: "IT",
         superior: itManager,
         subordinates: [],
     },
     {
-        id: "d5",
+        id: "it5",
         name: "Killian Price",
         department: "IT",
         superior: itManager,
         subordinates: [],
     },
     {
-        id: "d6",
+        id: "it6",
         name: "Layla Park",
+        department: "IT",
+        superior: itManager,
+        subordinates: [],
+    },
+    {
+        id: "it7",
+        name: "Victor Gray",
         department: "IT",
         superior: itManager,
         subordinates: [],
     }
 ]
-
-
 
 const marketers: Employee[] = [
     {
@@ -118,6 +116,6 @@ marketingManager.subordinates = marketers;
 hrManager.subordinates = hr;
 ceo.subordinates.push(hrManager, itManager, marketingManager);
 
-const company: Employee[] = [ceo, hrManager, itManager, marketingManager, ...devs, ...marketers];
+const company: Employee[] = [ceo, hrManager, itManager, marketingManager, ...devs, ...marketers, ...hr];
 export { company }
 

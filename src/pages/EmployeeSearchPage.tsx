@@ -4,6 +4,8 @@ import employeeRepo from "../data/EmployeeRepository"
 
 
 export default function EmployeeSearchPage() {
+
+    // TODO: URL Suchparameter auslesen und in `name` und `department` speichern
     const name = "";
     const department = "";
     const employees = employeeRepo.findWhere(name, department);

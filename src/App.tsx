@@ -3,7 +3,7 @@ import EmployeeSearchPage from "./pages/EmployeeSearchPage"
 
 function App() {
     return <>
-        <EmployeePage />
+        <EmployeeSearchPage />
     </>
 }
 

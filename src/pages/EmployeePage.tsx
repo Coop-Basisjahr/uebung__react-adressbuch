@@ -5,7 +5,7 @@ import employeeRepo from "../data/EmployeeRepository"
 export default function EmployeePage() {
 
     // TODO: Employee anhand des URL Parameter {id} laden
-    const employee = employeeRepo.findById("e1");
+    const employee = employeeRepo.findById("h0");
 
     return <>
         <h1>{employee.name}</h1>

@@ -12,7 +12,6 @@ body {
 
 a {
     color: black;
-    text-decoration: none;
 }
 
 #root {
@@ -35,6 +34,11 @@ a {
     padding: .2em .8em;
     overflow: hidden;
     background: white;
+    transition: background-color ease .3s;
+}
+
+.employee-card:hover {
+    background: rgb(255, 184, 184);
 }
 
 .text-bold {
@@ -43,4 +47,8 @@ a {
 
 .text-center {
     text-align: center;
+}
+
+.no-underline {
+    text-decoration: none;
 }

@@ -6,7 +6,7 @@ type EmployeeCardProps = {
 }
 
 export default function EmployeeCard({ employee }: EmployeeCardProps) {
-    return <Link to={`/employee/${employee.id}`}>
+    return <Link to={`/employee/${employee.id}`} className="no-underline">
         <div className="employee-card">
             <p>
                 <span className="text-bold">{employee.name}</span><br />

@@ -12,14 +12,18 @@ export default function EmployeePage() {
         <p>Abteilung: {employee.department}
             {employee.superior && <>
                 <br />
+
+                Vorgesetzte(r):
                 <Link to={`/employee/${employee.superior.id}`}>
-                    <span>Vorgesetzte(r): {employee.superior.name}</span>
+                    {employee.superior.name}
                 </Link>
             </>}
-        </p>
-        {employee.subordinates.length > 0 && <>
-            <h2>Direkt untergestellte</h2>
-            <EmployeeGrid employees={employee.subordinates} />
-        </>}
+        </p >
+        {
+            employee.subordinates.length > 0 && <>
+                <h2>Direkt untergestellte</h2>
+                <EmployeeGrid employees={employee.subordinates} />
+            </>
+        }
     </>
 }

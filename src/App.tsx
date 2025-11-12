@@ -1,9 +1,11 @@
 import EmployeePage from "./pages/EmployeePage"
-import EmployeeSearchPage from "./pages/EmployeeSearchPage"
+import Index from "./pages/Index"
 
 function App() {
     return <>
-        <EmployeeSearchPage />
+        <Index />
+        {/* TODO: Route / für Index einrichten */}
+        {/* TODO: Route /employee/:id für EmployeePage einrichten */}
     </>
 }
 
